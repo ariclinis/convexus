@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tipo Entidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th>Codigo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipo_entidades.each do |tipo_entidade| %>
+      <tr>
+        <td><%= tipo_entidade.descricao %></td>
+        <td><%= tipo_entidade.codigo %></td>
+        <td><%= link_to 'Show', tipo_entidade %></td>
+        <td><%= link_to 'Edit', edit_tipo_entidade_path(tipo_entidade) %></td>
+        <td><%= link_to 'Destroy', tipo_entidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipo Entidade', new_tipo_entidade_path %>

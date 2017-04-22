@@ -1,0 +1,38 @@
+<style type="text/css">
+  input[type=text]{
+    width: 90%;
+  }
+
+</style>
+<div class="row">
+<div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Rigisto de bairros</div>
+      <div class="panel-body" style="position:relative;margin:0; ">
+        <%= simple_form_for bairro, as: 'bairro'  do |f| %>
+       
+
+        <%= f.input(:descricao, label: 'Descrição', placeholder: "Porfavor verifique o caompo") %>
+       
+        
+        <%= f.input :codigo, label: 'Codigo', placeholder: "Porfavor, digite o codigo" %>
+        <%= f.label :municipio_id %>
+        <%= f.collection_select(:municipio_id, Municipio.all, :id, :descricao, prompt: true) %>
+
+        <br>
+        <br>
+        <br>
+        <%= f.button :submit, "Concluir" , class: "btn btn-primary" %>
+
+        <% end %>
+
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+
+
+

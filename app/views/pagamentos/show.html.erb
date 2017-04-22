@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @pagamento.codigo %>
+</p>
+
+<p>
+  <strong>Formapagamento:</strong>
+  <%= @pagamento.formaPagamento %>
+</p>
+
+<p>
+  <strong>Banco:</strong>
+  <%= @pagamento.banco_id %>
+</p>
+
+<p>
+  <strong>Conta bancaria:</strong>
+  <%= @pagamento.conta_bancaria_id %>
+</p>
+
+<p>
+  <strong>Numerotalao:</strong>
+  <%= @pagamento.numeroTalao %>
+</p>
+
+<p>
+  <strong>Datapagamento:</strong>
+  <%= @pagamento.dataPagamento %>
+</p>
+
+<p>
+  <strong>Valortalao:</strong>
+  <%= @pagamento.valorTalao %>
+</p>
+
+<p>
+  <strong>Valorutilizado:</strong>
+  <%= @pagamento.valorUtilizado %>
+</p>
+
+<%= link_to 'Edit', edit_pagamento_path(@pagamento) %> |
+<%= link_to 'Back', pagamentos_path %>

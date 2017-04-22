@@ -1,0 +1,29 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Dados do Bairro</div>
+				<div class="panel-body" style="position:relative;margin:0; ">
+					<h4><span class="label label-default">Descricao:</span> <%= @bairro.descricao %></h4>
+
+				</p>
+				<p>
+					<h4><span class="label label-default">Codigo:</span> <%= @bairro.codigo %></h4>
+
+				</p>
+				<p>
+					<h4><span class="label label-default">Municipio:</span> <%= Municipio.find(@bairro.municipio_id).descricao %></h4>
+
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<%= link_to 'Edit', edit_bairro_path(@bairro),class: "btn btn-info" %> |
+<%= link_to 'Back', bairros_path, class: "btn btn-danger" %>

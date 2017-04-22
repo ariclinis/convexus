@@ -1,0 +1,43 @@
+
+<%= simple_form_for pagamento, as: 'pagamento', :multipart => true  do |f| %>
+<%= f.error_notification %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Dados Pessoais</div>
+      <div class="panel-body" style="position:relative;margin:0; ">
+
+
+        <%= f.input(:codigo, label: 'Codigo de pagamento', has_validators: false) %>
+
+        <%= f.label :formaPagamento, style: "float: left;"%> 
+
+
+        <br>
+        <br>
+        <%= f.select(:formaPagamento,options_for_select([["Deposito Bancário", "Deposito Bancário"], ["Transferência Bancaria", "Transferência Bancaria"], ["Cash", "Cash"]],pagamento.formaPagamento), {include_blank: "Selecione"}) %>
+        <br><br>
+        <%= f.label :banco_id, style: "float: left;"%> 
+        <br><br>
+        <%= f.collection_select(:banco_id, Banco.all, :id, :descricao, prompt: false) %>
+        <br><br>
+        <%= f.label :conta_bancaria_id, style: "float: left;"%>
+        <br><br>
+        <%= f.collection_select(:conta_bancaria_id, ContaBancarium.all, :id, :descricao, prompt: false) %>
+        <%= f.input :numeroTalao, label: 'Número de talão', placeholder: "" %>
+
+        <br>
+        <%= f.input :dataPagamento, label: "Data pagamento", as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y'), type: "date" } %>  
+        <%= f.input :valorTalao, label: 'Valor Talão', placeholder: "" %>
+        <%= f.input :valorUtilizado, label: 'Valor Utilizado', placeholder: "" %>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>

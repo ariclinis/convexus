@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @conta_bancarium.descricao %>
+</p>
+
+<p>
+  <strong>Banco:</strong>
+  <%= @conta_bancarium.banco_id %>
+</p>
+
+<p>
+  <strong>Tipoconta:</strong>
+  <%= @conta_bancarium.tipoConta %>
+</p>
+
+<p>
+  <strong>Moeda:</strong>
+  <%= @conta_bancarium.moeda_id %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @conta_bancarium.estado %>
+</p>
+
+<p>
+  <strong>Utilizador:</strong>
+  <%= @conta_bancarium.utilizador_id %>
+</p>
+
+<%= link_to 'Edit', edit_conta_bancarium_path(@conta_bancarium) %> |
+<%= link_to 'Back', conta_bancaria_path %>

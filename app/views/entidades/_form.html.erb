@@ -1,0 +1,105 @@
+<style type="text/css">
+  input[type=text]{
+    width: 90%;
+  }
+  #entidade_provincia_id{
+    float: left;
+  }
+  #entidade_municipio_id{
+    float: left;
+  }
+  #entidade_bairro_id{
+    float: left;
+  }
+</style>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Dados Pessoais</div>
+      <div class="panel-body" style="position:relative;margin:0; ">
+        <%= simple_form_for entidade, as: 'entidade', :multipart => true  do |f| %>
+
+        <%= f.input(:nome, label: 'Nome da Entidade', has_validators: false) %>
+
+        <%= f.label :genero, style: "float: left;"%> 
+        <%= f.label :estadoCivil, style: "float: left; margin-left: 40px"%>  
+        <br>
+        <br>
+        <%= f.select(:genero,options_for_select([["Masculino", "M"], ["Femenino", "F"]],entidade.genero), {include_blank: "Selecione"}) %>
+
+        
+        <%= f.select(:estadoCivil,options_for_select(['Solteiro/a','Casado/a','Divorciado/a','Viuvo/a'],entidade.estadoCivil), {include_blank: "Selecione"}) %>
+
+        <%= f.input :bi, label: 'Bilhete de Identidade', placeholder: "" %>
+
+
+
+        <%= f.input :nacionalidade, label: 'nacionalidade', placeholder: "" %>
+        <%= f.label :provincia_id, style: "float: left"  %> 
+        <%= f.label :municipio_id, style: "float: left; margin-left: 40px; margin-button:5px;"  %>
+        <%= f.label :bairro_id, style: "float: left; margin-left: 40px" %>
+
+        <br><br>
+
+        <%= f.collection_select(:provincia_id, Provincium.all, :id, :descricao, prompt: false) %>
+
+
+        <%= f.collection_select(:municipio_id, Municipio.all, :id, :descricao, prompt: false) %>
+
+
+        <%= f.collection_select(:bairro_id, Bairro.all, :id, :descricao, prompt: false) %>
+
+
+        <br><br>
+        <%= f.input :pai, label: 'Nome Pai', placeholder: "" %>
+        <%= f.input :mae, label: 'Nome Mãe', placeholder: "" %>
+
+        
+
+
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Dados Profissionais</div>
+      <div class="panel-body" style="position:relative;margin:0; ">
+      
+        <%= f.file_field :foto %>
+        <%= f.input :nif, label: 'Nº do NIF', placeholder: "" %>
+        <%= f.input :profissao, label: 'Profissão', placeholder: "" %>
+
+        <%= f.label :telefone %>
+        <%= f.text_field :telefone %>
+
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+
+        <%= f.label :tipoEntidade %>
+        <%= f.collection_select(:tipoEntidade, TipoEntidade.all, :id, :descricao, {include_blank: "Selecione"}, prompt: true) %>
+
+        <%= f.label :homePage %>
+        <%= f.number_field :homePage %>
+
+        <%= f.label :estado %>
+        <%= f.select(:estado,options_for_select(['Activo','Inactivo'],entidade.estado), {include_blank: "Selecione"}) %>
+
+        <br>
+        <br>
+        
+
+        
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="col-md-12">
+ <div class="panel panel-primary">
+  <div class="panel-body" style="position:relative;margin:0; ">
+    <%= f.button :submit, "Concluir" , class: "btn btn-primary", style: "float:left" %>
+
+    <% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @provincium.descricao %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @provincium.codigo %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @provincium.pais %>
+</p>
+
+<%= link_to 'Edit', edit_provincium_path(@provincium) %> |
+<%= link_to 'Back', provincia_path %>

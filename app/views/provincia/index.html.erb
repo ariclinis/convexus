@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Provincia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th>Codigo</th>
+      <th>Pais</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @provincia.each do |provincium| %>
+      <tr>
+        <td><%= provincium.descricao %></td>
+        <td><%= provincium.codigo %></td>
+        <td><%= provincium.pais %></td>
+        <td><%= link_to 'Show', provincium %></td>
+        <td><%= link_to 'Edit', edit_provincium_path(provincium) %></td>
+        <td><%= link_to 'Destroy', provincium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Provincium', new_provincium_path %>

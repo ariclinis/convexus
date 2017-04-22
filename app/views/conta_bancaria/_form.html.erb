@@ -1,0 +1,16 @@
+<%= simple_form_for(@conta_bancarium) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :descricao %>
+    <%= f.input :banco_id %>
+    <%= f.input :tipoConta %>
+    <%= f.input :moeda_id %>
+    <%= f.input :estado %>
+    <%= f.input :utilizador_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

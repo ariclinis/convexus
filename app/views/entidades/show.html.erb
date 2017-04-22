@@ -1,0 +1,110 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Dados Pessoais</div>
+      <div class="panel-body" style="position:relative;margin:0; ">
+
+
+        <p>
+          <strong>Nome:</strong>
+          <%= @entidade.nome %>
+        </p>
+
+        <p>
+          <strong>Bi:</strong>
+          <%= @entidade.bi %>
+        </p>
+
+        <p>
+          <strong>Genero:</strong>
+          <%= @entidade.genero %>
+        </p>
+
+        <p>
+          <strong>Estadocivil:</strong>
+          <%= @entidade.estadoCivil %>
+        </p>
+        <p>
+          <strong>Nacionalidade:</strong>
+          <%= @entidade.nacionalidade %>
+        </p>
+
+        <p>
+          <strong>Provincia:</strong>
+          <%= Provincium.find(@entidade.provincia_id).descricao %>
+        </p>
+
+        <p>
+          <strong>Municipio:</strong>
+          <%= Municipio.find(@entidade.municipio_id).descricao %>
+        </p>
+
+        <p>
+          <strong>Bairro:</strong>
+          <%= Bairro.find(@entidade.bairro_id).descricao %>
+        </p>
+
+        <p>
+          <strong>Pai:</strong>
+          <%= @entidade.pai %>
+        </p>
+
+        <p>
+          <strong>Mae:</strong>
+          <%= @entidade.mae %>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Dados Profissionais</div>
+      <div class="panel-body" style="position:relative;margin:0; ">
+      <%= image_tag(@entidade.foto_url, size: "150x150") if @entidade.foto? %>
+        <p>
+          <strong>Nif:</strong>
+          <%= @entidade.nif %>
+        </p>
+
+        <p>
+          <strong>Tipoentidade:</strong>
+          <%= TipoEntidade.find(@entidade.tipoEntidade).descricao %>
+        </p>
+
+
+        <p>
+          <strong>Profissao:</strong>
+          <%= @entidade.profissao %>
+        </p>
+
+
+        <p>
+          <strong>Telefone:</strong>
+          <%= @entidade.telefone %>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <%= @entidade.email %>
+        </p>
+
+        <p>
+          <strong>Homepage:</strong>
+          <%= @entidade.homePage %>
+        </p>
+
+        <p>
+          <strong>Estado:</strong>
+          <%= @entidade.estado %>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<%= link_to 'Editar', edit_entidade_path(@entidade) %> |
+<%= link_to 'Voltar', entidades_path %>

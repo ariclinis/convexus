@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codbanco:</strong>
+  <%= @banco.CodBanco %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @banco.descricao %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @banco.estado %>
+</p>
+
+<p>
+  <strong>Utilizador:</strong>
+  <%= @banco.utilizador %>
+</p>
+
+<%= link_to 'Edit', edit_banco_path(@banco) %> |
+<%= link_to 'Back', bancos_path %>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bairros</h1>
+<div class="panel panel-default"> <div class="panel-heading">Listagem</div> <table class="table"> 
+<thead> 
+  <tr>
+    <th>Cod.</th>
+    <th>Descricao</th>
+    <th>Codigo Bairro</th>
+    <th>Municipio</th>
+    <th colspan="3"></th>
+  </tr>
+</thead> 
+<tbody> 
+  <% a=0 %>
+  <% @bairros.each do |bairro| %>
+  <tr>
+    <td><%= a+=1 %></td>
+    <td><%= bairro.descricao %></td>
+    <td><%= bairro.codigo %></td>
+    <td><%= Municipio.find(bairro.municipio_id).descricao  %></td>
+    <td><%= link_to 'Mostrar', bairro %></td>
+    <td><%= link_to 'Editar', edit_bairro_path(bairro) %></td>
+    <td><%= link_to 'Eliminar', bairro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+</tbody> </table> 
+</div>
+
+<br>
+
+<%= link_to 'New Bairro', new_bairro_path %>

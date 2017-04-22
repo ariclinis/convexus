@@ -1,0 +1,16 @@
+<%= simple_form_for(@utilizador) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :nome %>
+    <%= f.input :nome_login %>
+    <%= f.input :email %>
+    <%= f.input :senha %>
+    <%= f.input :nivel_acesso %>
+    <%= f.input :estado %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descricao: MyString
+  banco_id: 1
+  tipoConta: 
+  moeda_id: 1
+  estado: MyString
+  utilizador_id: 1
+
+two:
+  descricao: MyString
+  banco_id: 1
+  tipoConta: 
+  moeda_id: 1
+  estado: MyString
+  utilizador_id: 1

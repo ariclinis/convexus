@@ -1,0 +1,33 @@
+<%= form_for(municipio) do |f| %>
+  <% if municipio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(municipio.errors.count, "error") %> prohibited this municipio from being saved:</h2>
+
+      <ul>
+      <% municipio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :descricao %>
+    <%= f.text_field :descricao %>
+  </div>
+
+  <div class="field">
+    <%= f.label :codigo %>
+    <%= f.text_field :codigo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :provincia_id %>
+    <%= f.collection_select(:provincia_id, Provincium.all, :id, :descricao, prompt: true) %>
+   
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

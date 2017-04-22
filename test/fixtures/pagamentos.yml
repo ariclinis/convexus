@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: MyString
+  formaPagamento: MyString
+  banco_id: 1
+  conta_bancaria_id: 1
+  numeroTalao: MyString
+  dataPagamento: 2017-04-22
+  valorTalao: 1.5
+  valorUtilizado: 1.5
+
+two:
+  codigo: MyString
+  formaPagamento: MyString
+  banco_id: 1
+  conta_bancaria_id: 1
+  numeroTalao: MyString
+  dataPagamento: 2017-04-22
+  valorTalao: 1.5
+  valorUtilizado: 1.5

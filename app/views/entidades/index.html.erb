@@ -1,0 +1,64 @@
+<div class="col-md-12">
+ <div class="panel panel-primary">
+  <div class="panel-body" style="position:relative;margin:0; ">
+    <%= link_to new_entidade_path, class: "btn btn-default btn-info" do %>
+    <i class="fa fa-plus"></i> Nova Entidade
+    
+    <% end %>
+  </div>
+</div>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<div class="panel panel-default"> <div class="panel-heading">
+  <h3>Listagem de Entidades</h3>
+</div> 
+<div class="table-responsive">
+  <table class="table"> 
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Bi</th>
+        <th>Bairro</th>
+        <th>Nif</th>
+        <th>Tipo entidade</th>
+        <th>Profissao</th>
+        <th>Genero</th>
+        <th>Telefone</th>
+        <th>Homepage</th>
+        <th>Estado</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @entidades.each do |entidade| %>
+      <tr>
+        <td><%= entidade.nome %></td>
+        <td><%= entidade.bi %></td>
+        <td><%= entidade.bairro_id %></td>
+        <td><%= entidade.nif %></td>
+        <td><%= TipoEntidade.find(entidade.tipoEntidade).descricao %></td>
+        <td><%= entidade.profissao %></td>
+        <td><%= entidade.genero %></td>
+        <td><%= entidade.telefone %></td>
+        <td><%= entidade.homePage %></td>
+        <td><%= entidade.estado %></td>
+        <td><%= link_to 'Mostrar', entidade, class: "label label-info" %></td>
+        <td><%= link_to 'Editar', edit_entidade_path(entidade), class: "label label-warning" %></td>
+        <td><%= link_to 'Eliminar', entidade, method: :delete, data: { confirm: 'Tem certeza ?' }, class: "label label-danger" %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
+<div style="float: right;">
+<%= will_paginate( @entidades, renderer: BootstrapPagination::Rails, previous_label: "Anterior", next_label: "Próxima") %></div>
+  
+</div>
+
+<br>
+
+
