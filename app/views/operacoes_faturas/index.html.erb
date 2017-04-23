@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Operacoes Faturas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Descricao</th>
+      <th>Id estado</th>
+      <th>Id utilizador</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operacoes_faturas.each do |operacoes_fatura| %>
+      <tr>
+        <td><%= operacoes_fatura.codigo %></td>
+        <td><%= operacoes_fatura.descricao %></td>
+        <td><%= operacoes_fatura.id_estado %></td>
+        <td><%= operacoes_fatura.id_utilizador %></td>
+        <td><%= link_to 'Show', operacoes_fatura %></td>
+        <td><%= link_to 'Edit', edit_operacoes_fatura_path(operacoes_fatura) %></td>
+        <td><%= link_to 'Destroy', operacoes_fatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Operacoes Fatura', new_operacoes_fatura_path %>

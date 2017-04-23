@@ -1,0 +1,2 @@
+class OperacoesFatura < ApplicationRecord
+end
