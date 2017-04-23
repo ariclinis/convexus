@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :operacoes_faturas
   resources :pagamentos
   devise_for :users
   resources :utilizadors
