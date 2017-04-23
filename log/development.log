@@ -23940,3 +23940,40 @@ Processing by TipoEntidadesController#show as HTML
 Completed 200 OK in 122ms (Views: 117.1ms | ActiveRecord: 1.1ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5393303347051636485', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateOperacoesFaturas (20170423002131)
+  [1m[35m (373.7ms)[0m  [1m[35mCREATE TABLE `operacoes_faturas` (`id` int AUTO_INCREMENT PRIMARY KEY, `codigo` varchar(255), `descricao` varchar(255), `id_estado` int, `id_utilizador` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170423002131')[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5393303347051636485')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `bairros`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'bairros'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `bancos`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'bancos'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `conta_bancaria`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'conta_bancaria'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `entidades`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'entidades'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `moedas`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'moedas'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `municipios`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'municipios'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `operacoes_faturas`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'operacoes_faturas'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `pagamentos`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'pagamentos'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `provincia`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'provincia'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tipo_entidades`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tipo_entidades'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `utilizadors`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'utilizadors'[0m
