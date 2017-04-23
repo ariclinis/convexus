@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tipo_docs
+  resources :prod_servis
   resources :operacoes_faturas
   resources :pagamentos
   devise_for :users

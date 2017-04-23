@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @prod_servi.codigo %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @prod_servi.descricao %>
+</p>
+
+<p>
+  <strong>Valor unitario:</strong>
+  <%= @prod_servi.valor_unitario %>
+</p>
+
+<p>
+  <strong>Id imposto:</strong>
+  <%= @prod_servi.id_imposto %>
+</p>
+
+<p>
+  <strong>Id estado:</strong>
+  <%= @prod_servi.id_estado %>
+</p>
+
+<p>
+  <strong>Id utilizador:</strong>
+  <%= @prod_servi.id_utilizador %>
+</p>
+
+<%= link_to 'Edit', edit_prod_servi_path(@prod_servi) %> |
+<%= link_to 'Back', prod_servis_path %>

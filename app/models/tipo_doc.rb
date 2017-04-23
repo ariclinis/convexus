@@ -1,0 +1,2 @@
+class TipoDoc < ApplicationRecord
+end

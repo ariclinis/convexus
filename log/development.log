@@ -23977,3 +23977,182 @@ Migrating to CreateOperacoesFaturas (20170423002131)
   [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
   [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `utilizadors`[0m
   [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'utilizadors'[0m
+Started GET "/tipo_" for 127.0.0.1 at 2017-04-23 01:34:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  
+ActionController::RoutingError (No route matches [GET] "/tipo_"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/programacao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/programacao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/programacao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /home/programacao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [106 times] (65.3ms)
+  Rendered /home/programacao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.9ms)
+  Rendering /home/programacao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/programacao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/programacao/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (121.9ms)
+Started GET "/operacoes_faturas" for 127.0.0.1 at 2017-04-23 01:34:11 +0100
+Processing by OperacoesFaturasController#index as HTML
+  Rendering operacoes_faturas/index.html.erb within layouts/application
+  [1m[36mOperacoesFatura Load (0.4ms)[0m  [1m[34mSELECT `operacoes_faturas`.* FROM `operacoes_faturas`[0m
+  Rendered operacoes_faturas/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1419ms (Views: 1405.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/operacoes_faturas/new" for 127.0.0.1 at 2017-04-23 01:34:14 +0100
+Processing by OperacoesFaturasController#new as HTML
+  Rendering operacoes_faturas/new.html.erb within layouts/application
+  Rendered operacoes_faturas/_form.html.erb (122.9ms)
+  Rendered operacoes_faturas/new.html.erb within layouts/application (124.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 293ms (Views: 277.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/operacoes_faturas" for 127.0.0.1 at 2017-04-23 01:34:26 +0100
+Processing by OperacoesFaturasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ohzuqXJg7zQHd6VqO5wod9B9QVozyOcrfWf58PeF9Xp5uxumRqUAjE4+4l4mDHWWhj94cNitIY7b8++8oUXHUA==", "operacoes_fatura"=>{"codigo"=>"Nada", "descricao"=>"Nada", "id_estado"=>"1", "id_utilizador"=>"1"}, "commit"=>"Create Operacoes fatura"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `operacoes_faturas` (`codigo`, `descricao`, `id_estado`, `id_utilizador`, `created_at`, `updated_at`) VALUES ('Nada', 'Nada', 1, 1, '2017-04-23 00:34:26', '2017-04-23 00:34:26')[0m
+  [1m[35m (80.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/operacoes_faturas/1
+Completed 302 Found in 86ms (ActiveRecord: 80.9ms)
+
+
+Started GET "/operacoes_faturas/1" for 127.0.0.1 at 2017-04-23 01:34:26 +0100
+Processing by OperacoesFaturasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOperacoesFatura Load (0.4ms)[0m  [1m[34mSELECT  `operacoes_faturas`.* FROM `operacoes_faturas` WHERE `operacoes_faturas`.`id` = 1 LIMIT 1[0m
+  Rendering operacoes_faturas/show.html.erb within layouts/application
+  Rendered operacoes_faturas/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 116ms (Views: 112.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/operacoes_faturas" for 127.0.0.1 at 2017-04-23 01:34:28 +0100
+Processing by OperacoesFaturasController#index as HTML
+  Rendering operacoes_faturas/index.html.erb within layouts/application
+  [1m[36mOperacoesFatura Load (0.4ms)[0m  [1m[34mSELECT `operacoes_faturas`.* FROM `operacoes_faturas`[0m
+  Rendered operacoes_faturas/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 130ms (Views: 127.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/operacoes_faturas/1" for 127.0.0.1 at 2017-04-23 01:34:29 +0100
+Processing by OperacoesFaturasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOperacoesFatura Load (0.5ms)[0m  [1m[34mSELECT  `operacoes_faturas`.* FROM `operacoes_faturas` WHERE `operacoes_faturas`.`id` = 1 LIMIT 1[0m
+  Rendering operacoes_faturas/show.html.erb within layouts/application
+  Rendered operacoes_faturas/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 128ms (Views: 124.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/operacoes_faturas" for 127.0.0.1 at 2017-04-23 01:34:31 +0100
+Processing by OperacoesFaturasController#index as HTML
+  Rendering operacoes_faturas/index.html.erb within layouts/application
+  [1m[36mOperacoesFatura Load (0.5ms)[0m  [1m[34mSELECT `operacoes_faturas`.* FROM `operacoes_faturas`[0m
+  Rendered operacoes_faturas/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 168ms (Views: 164.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/operacoes_faturas/1" for 127.0.0.1 at 2017-04-23 01:34:32 +0100
+Processing by OperacoesFaturasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOperacoesFatura Load (0.5ms)[0m  [1m[34mSELECT  `operacoes_faturas`.* FROM `operacoes_faturas` WHERE `operacoes_faturas`.`id` = 1 LIMIT 1[0m
+  Rendering operacoes_faturas/show.html.erb within layouts/application
+  Rendered operacoes_faturas/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 124ms (Views: 120.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/operacoes_faturas" for 127.0.0.1 at 2017-04-23 01:34:34 +0100
+Processing by OperacoesFaturasController#index as HTML
+  Rendering operacoes_faturas/index.html.erb within layouts/application
+  [1m[36mOperacoesFatura Load (0.5ms)[0m  [1m[34mSELECT `operacoes_faturas`.* FROM `operacoes_faturas`[0m
+  Rendered operacoes_faturas/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 136ms (Views: 133.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/operacoes_faturas/new" for 127.0.0.1 at 2017-04-23 01:34:37 +0100
+Processing by OperacoesFaturasController#new as HTML
+  Rendering operacoes_faturas/new.html.erb within layouts/application
+  Rendered operacoes_faturas/_form.html.erb (18.1ms)
+  Rendered operacoes_faturas/new.html.erb within layouts/application (20.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 152ms (Views: 148.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5393303347051636485', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProdServis (20170423004937)
+  [1m[35m (444.8ms)[0m  [1m[35mCREATE TABLE `prod_servis` (`id` int AUTO_INCREMENT PRIMARY KEY, `codigo` varchar(255), `descricao` varchar(255), `valor_unitario` float, `id_imposto` int, `id_estado` int, `id_utilizador` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170423004937')[0m
+  [1m[35m (50.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTipoDocs (20170423005956)
+  [1m[35m (376.1ms)[0m  [1m[35mCREATE TABLE `tipo_docs` (`id` int AUTO_INCREMENT PRIMARY KEY, `codigo` varchar(255), `descricao` varchar(255), `id_operacoes_fatura` int, `id_estado` int, `id_utilizador` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170423005956')[0m
+  [1m[35m (107.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5393303347051636485')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `bairros`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'bairros'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `bancos`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'bancos'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `conta_bancaria`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'conta_bancaria'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `entidades`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'entidades'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `moedas`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'moedas'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `municipios`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'municipios'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `operacoes_faturas`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'operacoes_faturas'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `pagamentos`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'pagamentos'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `prod_servis`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'prod_servis'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `provincia`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'provincia'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tipo_docs`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tipo_docs'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tipo_entidades`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tipo_entidades'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `utilizadors`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'utilizadors'[0m

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tipo Docs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Descricao</th>
+      <th>Id operacoes fatura</th>
+      <th>Id estado</th>
+      <th>Id utilizador</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipo_docs.each do |tipo_doc| %>
+      <tr>
+        <td><%= tipo_doc.codigo %></td>
+        <td><%= tipo_doc.descricao %></td>
+        <td><%= tipo_doc.id_operacoes_fatura %></td>
+        <td><%= tipo_doc.id_estado %></td>
+        <td><%= tipo_doc.id_utilizador %></td>
+        <td><%= link_to 'Show', tipo_doc %></td>
+        <td><%= link_to 'Edit', edit_tipo_doc_path(tipo_doc) %></td>
+        <td><%= link_to 'Destroy', tipo_doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipo Doc', new_tipo_doc_path %>

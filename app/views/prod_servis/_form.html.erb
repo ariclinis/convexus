@@ -1,0 +1,16 @@
+<%= simple_form_for(@prod_servi) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :codigo %>
+    <%= f.input :descricao %>
+    <%= f.input :valor_unitario %>
+    <%= f.input :id_imposto %>
+    <%= f.input :id_estado %>
+    <%= f.input :id_utilizador %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

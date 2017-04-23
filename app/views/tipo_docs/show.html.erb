@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @tipo_doc.codigo %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @tipo_doc.descricao %>
+</p>
+
+<p>
+  <strong>Id operacoes fatura:</strong>
+  <%= @tipo_doc.id_operacoes_fatura %>
+</p>
+
+<p>
+  <strong>Id estado:</strong>
+  <%= @tipo_doc.id_estado %>
+</p>
+
+<p>
+  <strong>Id utilizador:</strong>
+  <%= @tipo_doc.id_utilizador %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_doc_path(@tipo_doc) %> |
+<%= link_to 'Back', tipo_docs_path %>

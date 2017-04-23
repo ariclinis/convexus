@@ -1,0 +1,2 @@
+class ProdServi < ApplicationRecord
+end

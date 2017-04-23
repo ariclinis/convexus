@@ -1,0 +1,15 @@
+<%= simple_form_for(@tipo_doc) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :codigo %>
+    <%= f.input :descricao %>
+    <%= f.input :id_operacoes_fatura %>
+    <%= f.input :id_estado %>
+    <%= f.input :id_utilizador %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
